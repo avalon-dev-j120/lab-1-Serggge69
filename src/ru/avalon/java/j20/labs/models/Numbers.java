@@ -39,7 +39,6 @@ public final class Numbers {
      * @return большее из двух значений
      */
     public static <T extends Comparable<T>> T max(T a, T b) {//обобщённый метод max() для сравниваемых объектов
-        //return a > b ? a : b;
         return a.compareTo(b) >= 0 ? a : b;
     }
 

@@ -24,7 +24,7 @@ public class Task3 implements Task {
             System.out.print(fnum + " ");
             sum += fnum;
         }
-        System.out.println("\nsum = " + sum);
+        System.out.println("\nsum = " + sum + "\n");
         /*
          * TODO(Студент): Выполнить задание №3
          *
