@@ -35,9 +35,6 @@ public class Person {
         return hash;
     }
 
-    //public boolean equals(Person person){
-    //    return name.equals(person.name) && surname.equals(person.surname);
-    //}
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

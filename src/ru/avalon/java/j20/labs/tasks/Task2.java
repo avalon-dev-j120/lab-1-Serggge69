@@ -16,13 +16,12 @@ public class Task2 implements Task {
     @Override
     public void run() {
         Point point1 = new Point(3.58, -7.22);
-        System.out.println("Точка х: " + point1.getX() + ", точка у: " + point1.getY());
+        System.out.println("Точка с координатами типа float: (" + point1.getX() + ", " + point1.getY() + ")");
         
         Point point2 = new Point(5, 10);
-        System.out.println("Точка х: " + point2.getX() + ", точка у: " + point2.getY());
+        System.out.println("Точка с координатами типа int: (" + point2.getX() + ", " + point2.getY() + ")");
         
-        System.out.println("расстояние между точками: " + point1.distanceTo(point2) + "\n");
-        
+        System.out.println("Расстояние между двумя точками: " + point1.distanceTo(point2) + "\n");
         /*
          * TODO(Студент): Выполнять задание №2
          *

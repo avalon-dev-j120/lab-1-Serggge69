@@ -25,20 +25,22 @@ public class Task1 implements Task {
      */
     @Override
     public void run() {
-        int[] array = arrayFactory.getInstance(20);
+        Integer[] array = arrayFactory.getInstance(20);
         
         System.out.println("Начальный массив интов: " + Arrays.toString(array));
         
-        int min = Numbers.min(Numbers.castIntToInteger(array));
-        System.out.println("min int from T = " + min);
+        int minInt = Numbers.min(array);
+        System.out.println("(int) min = " + minInt);
+        double minDouble = Numbers.min(array);
+        System.out.println("(double) min = " + minDouble);
         
-        int max = Numbers.max(Numbers.castIntToInteger(array));
-        System.out.println("max int from T = " + max);
+        int maxInt = Numbers.max(array);
+        System.out.println("(int) max = " + maxInt);
+        double maxDouble = Numbers.max(array);
+        System.out.println("(double) max = " + maxDouble);
         
-        double avg = Numbers.avg(Numbers.castIntToInteger(array));
-        System.out.println("avg from T = " + avg + "\n");
-      
-       
+        double avg = Numbers.avg(array);
+        System.out.println("Среднее арифметическое членов массива = " + avg + "\n");
         /*
          * TODO(Студент): Выполните задание №1
          *

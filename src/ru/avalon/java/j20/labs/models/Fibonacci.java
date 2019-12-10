@@ -18,31 +18,28 @@ import java.util.Iterator;
  */
 public class Fibonacci implements Iterable<Integer> {
     
-    private int fnumbers[];
+    private final int fnumbers[];
     private int next;
     
     public Fibonacci (int length){
         fnumbers = new int[length];
-        if(length !=0 ){
-        fnumbers [0] = 0;
-        }
-        if (length > 1){
-            fnumbers[1] = 1;
-            if (length > 2){
-                for (int i = 2; i < fnumbers.length; i++) {
-                    fnumbers[i] = fnumbers[i-1] + fnumbers[i-2];
-                    
+        if (length > 0){
+            fnumbers [0] = 0;
+            if (length > 1){
+                fnumbers[1] = 1;
+                if (length > 2){
+                    for (int i = 2; i < fnumbers.length; i++) {
+                        fnumbers[i] = fnumbers[i-1] + fnumbers[i-2];
+                    }  
                 }
             }
         }
     }
-
     /**
      * Итератор, выполняющий обход последовательности
      * чисел Фибоначчи.
      */
-    private class FibonacciIterator implements Iterator<Integer> {//статический класс
-
+    private class FibonacciIterator implements Iterator<Integer> {
         /**
          * Определяет, есть ли следующее значение
          * последовательности чисел Фибоначчи.
@@ -53,7 +50,6 @@ public class Fibonacci implements Iterable<Integer> {
          */
         @Override
         public boolean hasNext() {
-            //throw new UnsupportedOperationException("Not implemented yet!");
             return next < fnumbers.length;
         }
 
