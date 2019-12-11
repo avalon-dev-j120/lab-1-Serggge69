@@ -1,6 +1,7 @@
 package ru.avalon.java.j20.labs.tasks;
 
 import ru.avalon.java.j20.labs.Task;
+import ru.avalon.java.j20.labs.models.Point;
 
 /**
  * Задание №2.
@@ -14,6 +15,13 @@ public class Task2 implements Task {
      */
     @Override
     public void run() {
+        Point point1 = new Point(3.58, -7.22);
+        System.out.println("Точка с координатами типа float: (" + point1.getX() + ", " + point1.getY() + ")");
+        
+        Point point2 = new Point(5, 10);
+        System.out.println("Точка с координатами типа int: (" + point2.getX() + ", " + point2.getY() + ")");
+        
+        System.out.println("Расстояние между двумя точками: " + point1.distanceTo(point2) + "\n");
         /*
          * TODO(Студент): Выполнять задание №2
          *
